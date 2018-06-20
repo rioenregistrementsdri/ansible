@@ -13,6 +13,3 @@
         platform: avaya_ers
         commands:
           - logging remote address 10.2.0.189
-        host: "{{ ansible_host }}"
-        username: "{{ custom_username }}"
-        password: "{{ custom_password }}"
