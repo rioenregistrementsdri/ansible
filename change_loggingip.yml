@@ -1,7 +1,6 @@
 ---
 
 - name: GET STRUCTURED DATA BACK FROM CLI DEVICES
-  hosts: avaya
   connection: local
   gather_facts: False
 
