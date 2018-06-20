@@ -1,0 +1,18 @@
+---
+
+- name: GET STRUCTURED DATA BACK FROM CLI DEVICES
+  hosts: avaya
+  connection: local
+  gather_facts: False
+
+  tasks:
+
+    - name: SHOW BOOT
+      ntc_config_command:
+        connection: ssh
+        platform: avaya_ers
+        commands:
+          - logging remote address 10.2.0.189
+        host: "{{ inventory_hostname }}"
+        username: "{{ username }}"
+        password: "{{ password }}"
