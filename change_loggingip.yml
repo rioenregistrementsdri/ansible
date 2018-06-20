@@ -2,6 +2,7 @@
 
 - name: GET STRUCTURED DATA BACK FROM CLI DEVICES
   connection: local
+  hosts: all
   gather_facts: False
 
   tasks:
