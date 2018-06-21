@@ -13,3 +13,4 @@
         platform: avaya_ers
         commands:
           - logging remote address 10.2.0.189
+        use_keys: false
