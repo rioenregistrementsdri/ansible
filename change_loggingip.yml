@@ -3,14 +3,14 @@
 - name: GET STRUCTURED DATA BACK FROM CLI DEVICES
   connection: local
   hosts: all
-  gather_facts: False
+  gather_facts: True
+
   tasks:
     - name: GET VLANS IN REAL TIME
-      ntc_config_command:
+      ntc_show_command:
         connection: ssh
         platform: avaya_ers
-        commands:
-          - show vlan
+        command: 'show vlan'
         use_keys: false
         host: "{{ ansible_host }}"
         username: "{{ custom_username }}"
