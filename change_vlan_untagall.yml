@@ -1,0 +1,24 @@
+---
+
+- name: GET STRUCTURED DATA BACK FROM CLI DEVICES
+  connection: local
+  hosts: all
+  gather_facts: True
+
+  tasks:
+    - name: GET VLANS IN REAL TIME
+      ntc_config_command:
+        connection: ssh
+        platform: avaya_ers
+        commands:
+          - conf t
+          - vlan ports {{ switch_ports }} tagging untagAll
+          - vlan members add {{ switch_vlan }} {{ switch_ports }}
+        use_keys: false
+        host: "{{ ansible_host }}"
+        username: "{{ custom_username }}"
+        password: "{{ custom_password }}"
+      register: result
+
+    - name: SHOW VLANS
+      debug: var=result
