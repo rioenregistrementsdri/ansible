@@ -14,7 +14,7 @@
         commands:
           - show vlan
         use_keys: false
-        host: {{ ansible_host  }}
+        host: "{{ ansible_host }}"
       register: result
 
     - name: SHOW VLANS
