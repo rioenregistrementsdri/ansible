@@ -13,6 +13,8 @@
           - show vlan
         use_keys: false
         host: "{{ ansible_host }}"
+        username: "{{ custom_username }}"
+        password: "{{ custom_password }}"
       register: result
 
     - name: SHOW VLANS
