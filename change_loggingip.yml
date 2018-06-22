@@ -9,7 +9,7 @@
 
     - name: GET VLANS IN REAL TIME
       ntc_config_command:
-        connection: netmiko_ssh
+        connection: telnet
         platform: avaya_ers
         commands:
           - show vlan
