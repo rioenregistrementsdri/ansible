@@ -4,9 +4,7 @@
   connection: local
   hosts: all
   gather_facts: False
-
   tasks:
-
     - name: GET VLANS IN REAL TIME
       ntc_config_command:
         connection: telnet
