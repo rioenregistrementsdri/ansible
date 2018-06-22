@@ -11,7 +11,8 @@
       ntc_config_command:
         connection: netmiko_ssh
         platform: avaya_ers
-        command: "show vlan"
+        commands:
+          - show vlan
         use_keys: false
       register: result
 
