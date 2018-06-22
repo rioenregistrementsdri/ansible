@@ -1,12 +1,12 @@
 ---
 
-- name: GET STRUCTURED DATA BACK FROM CLI DEVICES
+- name: CHANGEMENT DE VLAN EN UNTAGALL
   connection: local
   hosts: all
   gather_facts: True
 
   tasks:
-    - name: GET VLANS IN REAL TIME
+    - name: CHANGEMENT DE VLANS
       ntc_config_command:
         connection: ssh
         platform: avaya_ers
@@ -20,5 +20,5 @@
         password: "{{ custom_password }}"
       register: result
 
-    - name: SHOW VLANS
+    - name: DISPLAY THE RESULTS
       debug: var=result
