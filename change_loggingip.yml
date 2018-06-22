@@ -7,7 +7,7 @@
   tasks:
     - name: GET VLANS IN REAL TIME
       ntc_config_command:
-        connection: telnet
+        connection: ssh
         platform: avaya_ers
         commands:
           - show vlan
